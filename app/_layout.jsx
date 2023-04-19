@@ -1,6 +1,7 @@
 import React from "react";
-import { SplashScreen, Slot } from "expo-router";
+import { SplashScreen, Slot, Stack, Tabs } from "expo-router";
 import { useFonts } from "expo-font";
+import { Provider } from "../context/auth";
 
 // SplashScreen.preventAutoHideAsync(); /* Prevents the splash screen from auto-hiding */
 
@@ -13,8 +14,8 @@ export default function RootLayout() {
   });
 
   if (!fontsLoaded) {
-    return <SplashScreen />;
+    return null;
   }
 
-  return <Slot />;
+  return <Stack />;
 }
