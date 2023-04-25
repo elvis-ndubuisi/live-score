@@ -9,4 +9,9 @@ const COLORS = {
   gradientEnd: "rgba(237, 107, 78, 1)",
 };
 
-export { COLORS };
+const FONT_WEIGHT = {
+  regular: "400",
+  semibold: "600",
+};
+
+export { COLORS, FONT_WEIGHT };
