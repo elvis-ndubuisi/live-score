@@ -3,12 +3,17 @@ import { Link } from "expo-router";
 import React from "react";
 
 import { COLORS } from "../constants/theme";
+import npape from "../assets/images/npape.png";
 
 export default function Root() {
   return (
     <View style={styles.container}>
       <View style={styles.child}>
-        <Image />
+        <Image
+          source={require("../assets/images/npape.png")}
+          resizeMode="cover"
+          style={{ height: "50%" }}
+        />
       </View>
 
       <View style={styles.child}>
@@ -20,8 +25,12 @@ export default function Root() {
           <Text style={styles.note}>Wait for what? Let's get started.</Text>
         </View>
         <View>
-          <Link href="/home" style={styles.note}>
-            Button
+          <Link href="/signin" style={styles.note}>
+            Signin Modal
+          </Link>
+
+          <Link href="/explore" style={styles.note}>
+            Main view
           </Link>
         </View>
       </View>
